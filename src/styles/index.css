@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif; /* Montserrat agora é a primeira escolha */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New', monospace; /* Garanta que Source Code Pro também seja importado se necessário */
+}
