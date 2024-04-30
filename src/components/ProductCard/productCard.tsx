@@ -1,3 +1,4 @@
+// ProductCard.tsx
 import React from 'react';
 import './productCard.sass';
 import { FiShoppingBag } from "react-icons/fi";
@@ -12,11 +13,16 @@ interface ProductProps {
         price: number;
         photo: string;
     };
+    onAddToCart: (product: ProductProps['product']) => void;
 }
 
-const ProductCard: React.FC<ProductProps> = ({ product }) => {
+const ProductCard: React.FC<ProductProps> = ({ product, onAddToCart }) => {
+    if (!product) {
+        return null;
+    }
+
     return (
-        <div className="product-card">
+        <div className="product-card" onClick={() => onAddToCart(product)}>
             <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }}>
                 <div className="padding">
                     <img src={product.photo} alt={product.name} className="product-img" />

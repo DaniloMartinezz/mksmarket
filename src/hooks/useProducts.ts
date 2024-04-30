@@ -34,6 +34,6 @@ export const useProducts = () => {
   return useQuery<Product[], Error>('products', fetchProducts, {
     refetchOnWindowFocus: false,
     retry: false,
-    staleTime: 5 * 60 * 1000, 
+    staleTime: 5 * 60 * 1000,
   });
 };
